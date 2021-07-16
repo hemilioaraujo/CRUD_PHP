@@ -1,0 +1,20 @@
+{
+    "name": "hemilio/crud",
+    "description": "CRUD com PHP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hemilioaraujo",
+            "email": "hemilioaraujo@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "5.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
