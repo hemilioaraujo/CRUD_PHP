@@ -1,17 +1,17 @@
 <?php
-    $resultados = '';
-    foreach ($vagas as $vaga) {
-        $resultados .= "
+$resultados = '';
+foreach ($vagas as $vaga) {
+    $resultados .= "
             <tr>
                 <td>{$vaga->id}</td>
                 <td>{$vaga->titulo}</td>
                 <td>{$vaga->descricao}</td>" .
-                '<td>' . ($vaga->ativo =='s' ? 'Ativo': 'Inativo') . "</td>
-                <td>{$vaga->data}</td>
+                '<td>' . ($vaga->ativo == 's' ? 'Ativo' : 'Inativo') . '</td>
+                <td>' . date('d/m/Y à\s H:i:s', strtotime($vaga->data)) . "</td>
                 <td>{}</td>
             </tr>
             ";
-    }
+}
 ?>
 
 <main>
@@ -32,7 +32,7 @@
                 <th>Ações</th>
             </thead>
             <tbody>
-                <?php echo $resultados;?>
+                <?php echo $resultados; ?>
             </tbody>
         </table>
     </section>
