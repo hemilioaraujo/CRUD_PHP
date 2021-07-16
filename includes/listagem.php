@@ -5,8 +5,8 @@
             <tr>
                 <td>{$vaga->id}</td>
                 <td>{$vaga->titulo}</td>
-                <td>{$vaga->descricao}</td>
-                <td>{$vaga->ativo}</td>
+                <td>{$vaga->descricao}</td>" .
+                '<td>' . ($vaga->ativo =='s' ? 'Ativo': 'Inativo') . "</td>
                 <td>{$vaga->data}</td>
                 <td>{}</td>
             </tr>
