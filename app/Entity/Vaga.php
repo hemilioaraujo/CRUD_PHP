@@ -39,13 +39,6 @@ class Vaga
 
     public static function getVagas($where = null, $order = null, $limit = null)
     {
-        $teste = new Database('vagas');
-        $result = $teste->select($where, $order, $limit);
-        $resultFetched = $result->fetchAll(PDO::FETCH_CLASS);
-
-        PPrint::pretty_print($resultFetched);
-
-        return (new Database('vagas'))->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
-        return (new Database('vagas'))->select($where, $order, $limit)->fetchAll();
+        return (new Database('vagas'))->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS);
     }
 }

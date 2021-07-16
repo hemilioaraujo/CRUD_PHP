@@ -5,7 +5,7 @@ use \App\Entity\Vaga;
 use App\Tools\PPrint;
 
 $vagas = Vaga::getVagas();
-// PPrint::pretty_print($vagas);
+PPrint::pretty_print($vagas);
 
 include __DIR__.'/includes/header.php';
 include __DIR__.'/includes/listagem.php';
