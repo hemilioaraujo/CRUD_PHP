@@ -1,5 +1,20 @@
-<main>
+<?php
+    $resultados = '';
+    foreach ($vagas as $vaga) {
+        $resultados .= "
+            <tr>
+                <td>{$vaga->id}</td>
+                <td>{$vaga->titulo}</td>
+                <td>{$vaga->descricao}</td>
+                <td>{$vaga->ativo}</td>
+                <td>{$vaga->data}</td>
+                <td>{}</td>
+            </tr>
+            ";
+    }
+?>
 
+<main>
     <section>
         <a href="cadastrar.php">
             <button class="btn btn-success">Nova vaga</button>
@@ -17,7 +32,7 @@
                 <th>Ações</th>
             </thead>
             <tbody>
-
+                <?php echo $resultados;?>
             </tbody>
         </table>
     </section>
